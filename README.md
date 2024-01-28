@@ -2,8 +2,36 @@
 
 # Django--Google_Sign-in
 Google sign-in for django app
+## Django app Setup
+1.Create our Google sign in consent screen.And create a project 
+   -  open Google [ API console](https://console.developers.google.com/apis)
+   -  Create a APIs project
+   -  Select your project
+   - ![image](https://github.com/AnanduVijay/Django--Google_Sign-in/assets/79689148/149434cd-5988-4313-92dc-faf6082562e0)
 
-
+2. Configure the OAuth consent screen.
+     - Click Credentials > Create credentials > OAuth client ID.
+     - Click Configure the consent screen > External > Create. Complete the form (I added example.com as the Authorized domain).
+     - Add scopes to determine what information you want to access (I added email) > Save and Continue.
+     - Add test Google account users (I added my email) > Save and Continue.
+   - Click Back to Dashboard
+3.  Create an OAuth client ID
+    - Click Credentials > Create credentials > OAuth client ID > Web application.
+    - Add authorized Javascript origins For our local development,
+      add both http://localhost and http://localhost:8000 to Authorized JavaScript origins.
+    - Add  Authorized redirect URIs
+      ```bash
+       http://localhost:8000/auth-receiver
+      ````
+    - Create and copy
+    - Click create and copy the Client ID and Client Secret.
+4. Add the Client ID to our Django app
+   - Create a file called .env at config/.env and add the below to it.
+     ```bash
+     GOOGLE_OAUTH_CLIENT_ID=<your_client_id>
+     ```
+       
+   
 ## Installation
 
 1. Clone repo
