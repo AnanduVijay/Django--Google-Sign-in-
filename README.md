@@ -25,13 +25,17 @@ Google sign-in for django app
       ````
     - Create and copy
     - Click create and copy the Client ID and Client Secret.
-4. Add the Client ID to our Django app
+4. Add the Client ID to  Django app
    - Create a file called .env at config/.env and add the below to it.
      ```bash
      GOOGLE_OAUTH_CLIENT_ID=<your_client_id>
      ```
-       
-   
+5. Also add this client id  in sign_in.html.
+   ```bash
+    data-client_id = "your_client_id"
+   ```
+  - ![image](https://github.com/AnanduVijay/Django--Google_Sign-in/assets/79689148/409ed4f4-34cc-480a-a7a3-cec8de7f2ed5)
+
 ## Installation
 
 1. Clone repo
